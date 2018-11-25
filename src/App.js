@@ -57,9 +57,11 @@ class App extends Component {
             {!this.wasSubmitted &&
               <form onSubmit={this.validateForm}>
                 <p className="m-b-15">Subscribe for updates.</p>
-                <label htmlFor="email">Email address</label>
-                <input name="email" id="email" type="email" placeholder="email address" value={this.state.email} onChange={this.handleChange} />
-                <button className="m-l-10">Subscribe</button>
+                <div className="form__field-container">
+                  <label htmlFor="email">Email address</label>
+                  <input className="form__field" name="email" id="email" type="email" placeholder="email address" value={this.state.email} onChange={this.handleChange} />
+                  <button className="form__field form__button">Subscribe</button>
+                </div>
               </form>
             }
             {this.wasSubmitted &&

@@ -1,6 +1,8 @@
 #root,
 .App {
   height: 100%;
+  width: 100%;
+  position: fixed;
 }
 
 .App {
@@ -18,6 +20,7 @@ main {
   align-items: center;
   max-width: 400px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 h1,
@@ -29,7 +32,7 @@ label {
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 36px;
 }
 
 input,
@@ -64,6 +67,33 @@ button {
   padding: 30px;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 3px;
+  max-width: 90vw;
+}
+
+.form__field-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.form__field {
+  width: 100%;
+}
+
+.form__button {
+  margin-top: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .form__field-container {
+    flex-wrap: nowrap;
+  }
+  .form__field {
+    width: auto;
+  }
+  .form__button {
+    margin: 0 0 0 10px;
+  }
 }
 
 footer {
